@@ -27,7 +27,7 @@ function writePassword() {
 function generatePassword() {
 
   //prompt user  asking how many characters he wants for his new password
-  var passwordLength = prompt("Please enter the number of characters you want for you new password.  It must be at least 8 but less than 128.");
+  var passwordLength = prompt("Please enter the number of characters you want for your new password.  It must be at least 8 but less than 128.");
 
   //IF the length is between 8 and 128 than set the input to the array length
   if (passwordLength > 7 && passwordLength < 128) {
@@ -112,6 +112,6 @@ function generatePassword() {
     console.log(newPassword);
   }
 
-
+  newPassword = newPassword.join("");
   return newPassword;
 }
