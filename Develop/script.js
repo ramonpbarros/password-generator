@@ -135,27 +135,25 @@ function generatePassword() {
       }
   }
 
-  function shuffle(array) {
-    var currentIndex = array.length, temporaryValue, randomIndex;
-  
-    // While there remain elements to shuffle...
-    while (0 !== currentIndex) {
-  
-      // Pick a remaining element...
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex -= 1;
-  
-      // And swap it with the current element.
-      temporaryValue = array[currentIndex];
-      array[currentIndex] = array[randomIndex];
-      array[randomIndex] = temporaryValue;
+  function shuffle(arra1) {
+    var ctr = arra1.length, temp, index;
+
+// While there are elements in the array
+    while (ctr > 0) {
+// Pick a random index
+        index = Math.floor(Math.random() * ctr);
+// Decrease ctr by 1
+        ctr--;
+// And swap the last element with it
+        temp = arra1[ctr];
+        arra1[ctr] = arra1[index];
+        arra1[index] = temp;
     }
-  
-    return array;
-  }
-  console.log(newPassword);
-  shuffle(newPassword);
-  console.log(newPassword):
+    return arra1;
+}
+var myArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log(shuffle(newPassword));
+
   newPassword = newPassword.join("");
   return newPassword;
 }
