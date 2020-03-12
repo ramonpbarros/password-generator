@@ -88,7 +88,7 @@ function generatePassword() {
     }
   } else if (lowerCases === false && upperCases === false) {
     //alert user that since he didnt want lowercase password will be generated w upercase letters
-    alert("Since you did not want any lowercase characters password will be generated with upercase characters only!");
+    alert("Since you did not want any lowercase characters, password will be generated with upercase characters only!");
     //make all indexes upercase
     for (var k = 0; k < newPassword.length; k++) {
       if (typeof newPassword[k] === "string") {
