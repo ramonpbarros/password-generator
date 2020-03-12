@@ -6,10 +6,10 @@ var newPassword = [
   "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
   "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
   "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z",
-  "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w"
+  "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x"
 ];
 //create array with special characters
-const specialCharacters = "!@#$%^&*()";
+var specialCharacters = "!@#$%^&*()";
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
@@ -30,7 +30,7 @@ function generatePassword() {
   var passwordLength = prompt("Please enter the number of characters you want for your new password.  It must be at least 8 but less than 128.");
 
   //IF the length is between 8 and 128 than set the input to the array length
-  if (passwordLength > 7 && passwordLength < 128) {
+  if (passwordLength > 7 && passwordLength < 129) {
     newPassword.length = passwordLength;
 
     //IF does not meet this criteria then alert user
@@ -129,29 +129,29 @@ function generatePassword() {
 
       if (optionsOfLettersM) {
         newPassword.splice(Math.floor(Math.random() * newPassword.length), 1, specialCharacters[Math.floor(Math.random() * 10)]);
-      } else if (optionsOfLettersMtwo){
+      } else if (optionsOfLettersMtwo) {
         newPassword.splice(Math.floor(Math.random() * newPassword.length), 1, specialCharacters[Math.floor(Math.random() * 10)]);
       }
-      }
+    }
   }
 
   function shuffle(arra1) {
     var ctr = arra1.length, temp, index;
 
-// While there are elements in the array
+    // While there are elements in the array
     while (ctr > 0) {
-// Pick a random index
-        index = Math.floor(Math.random() * ctr);
-// Decrease ctr by 1
-        ctr--;
-// And swap the last element with it
-        temp = arra1[ctr];
-        arra1[ctr] = arra1[index];
-        arra1[index] = temp;
+      // Pick a random index
+      index = Math.floor(Math.random() * ctr);
+      // Decrease ctr by 1
+      ctr--;
+      // And swap the last element with it
+      temp = arra1[ctr];
+      arra1[ctr] = arra1[index];
+      arra1[index] = temp;
     }
     return arra1;
   }
-  
+
   shuffle(newPassword);
   newPassword = newPassword.join("");
   return newPassword;
