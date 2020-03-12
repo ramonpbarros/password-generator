@@ -44,13 +44,13 @@ function generatePassword() {
   // checl IF answer is true
   if (numbers === true) {
     for (var i = 0; i < newPassword.length; i++) {
-      var optionsOfLettersI = (newPassword[i] === "c") ||
-        (newPassword[i] === "f") ||
-        (newPassword[i] === "j") ||
-        (newPassword[i] === "n") ||
-        (newPassword[i] === "r") ||
-        (newPassword[i] === "u") ||
-        (newPassword[i] === "y");
+      var optionsOfLettersI = (newPassword[i] === "a") ||
+        (newPassword[i] === "c") ||
+        (newPassword[i] === "e") ||
+        (newPassword[i] === "g") ||
+        (newPassword[i] === "i") ||
+        (newPassword[i] === "k") ||
+        (newPassword[i] === "m");
       if (optionsOfLettersI) {
         newPassword.splice(Math.floor(Math.random() * newPassword.length), 1, Math.floor(Math.random() * 10));
       }
@@ -64,15 +64,25 @@ function generatePassword() {
     //make some indexes upcase
     for (var j = 0; j < newPassword.length; j++) {
 
-      var optionsOfLettersJ = (newPassword[j] === "b") ||
+      var optionsOfLettersJ = (newPassword[j] === "a") ||
+        (newPassword[j] === "b") ||
+        (newPassword[j] === "c") ||
+        (newPassword[j] === "d") ||
         (newPassword[j] === "e") ||
+        (newPassword[j] === "f") ||
+        (newPassword[j] === "g");
+
+      var optionsOfLettersJtwo = (newPassword[j] === "h") ||
         (newPassword[j] === "i") ||
+        (newPassword[j] === "j") ||
+        (newPassword[j] === "k") ||
+        (newPassword[j] === "l") ||
         (newPassword[j] === "m") ||
-        (newPassword[j] === "q") ||
-        (newPassword[j] === "t") ||
-        (newPassword[j] === "x");
-        
+        (newPassword[j] === "n");
+
       if (typeof newPassword[j] === "string" && optionsOfLettersJ) {
+        newPassword[j] = newPassword[j].toUpperCase();
+      } else if (typeof newPassword[j] === "string" && optionsOfLettersJtwo) {
         newPassword[j] = newPassword[j].toUpperCase();
       }
     }
@@ -108,7 +118,7 @@ function generatePassword() {
         (newPassword[m] === "s") ||
         (newPassword[m] === "w");
 
-      var optionsOfLettersMtwo = (newPassword[m] === "a") ||
+      var optionsOfLettersMtwo = (newPassword[m] === "b") ||
         (newPassword[m] === "e") ||
         (newPassword[m] === "i") ||
         (newPassword[m] === "m") ||
