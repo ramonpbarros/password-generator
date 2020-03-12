@@ -69,8 +69,8 @@ function generatePassword() {
         (newPassword[j] === "g") ||
         (newPassword[j] === "j") ||
         (newPassword[j] === "m") ||
-        (newPassword[j] === "p") ||
-        (newPassword[j] === "s");
+        (newPassword[j] === "f") ||
+        (newPassword[j] === "e");
 
       var optionsOfLettersJtwo = (newPassword[j] === "v") ||
         (newPassword[j] === "x") ||
@@ -151,9 +151,8 @@ function generatePassword() {
     }
     return arra1;
   }
-  console.log(newPassword)
+  
   shuffle(newPassword);
-  console.log(newPassword)
   newPassword = newPassword.join("");
   return newPassword;
 }
