@@ -39,7 +39,7 @@ To-do list:
 
 ## Status
 Project is: _in progress_ 
-Make sure to check applications [here](https://ramonpbarros.github.io/password-generator/)
+* Make sure to check applications [here](https://ramonpbarros.github.io/password-generator/)
 
 ## Inspiration
 Project inspired by UCSD Coding Bootcamp, based on second week of course, applying JavaScript skills.
